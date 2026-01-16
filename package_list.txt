@@ -25,9 +25,7 @@ kdeconnect
 kitty
 lxappearance
 nano
-nautilus
-nautilus-python
-nautilus-sendto
+nemo
 networkmanager
 nm-connection-editor
 noto-fonts
