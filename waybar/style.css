@@ -1,0 +1,303 @@
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Waybar Style Configuration                          ║
+   ║                   Modern modular design with block styling                   ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+/* Global Variables - Auto-updated by theme switcher */
+@define-color bg #0a0e14;
+@define-color bg-dark #242933;
+@define-color fg #b3b1ad;
+@define-color accent #39bae6;
+@define-color urgent #f07178;
+@define-color warning #ffb454;
+@define-color success #c2d94c;
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Global Styles                                       ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+* {
+    font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+    border-bottom: 2px solid @accent;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+tooltip {
+    background: @bg-dark;
+    border: 1px solid @accent;
+    border-radius: 4px;
+    color: @fg;
+    padding: 10px;
+}
+
+tooltip label {
+    color: @fg;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Module Block Styling                                ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+/* Apply darker background to all modules */
+#workspaces,
+#window,
+#clock,
+#custom-cpu,
+#custom-ram,
+#custom-power-profile,
+#bluetooth,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#tray,
+#custom-power {
+    background-color: @bg-dark;
+    padding: 0 12px;
+    margin: 4px 0;
+}
+
+/* Hover effect for interactive modules */
+#custom-cpu:hover,
+#custom-ram:hover,
+#custom-power-profile:hover,
+#bluetooth:hover,
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#custom-power:hover {
+    background-color: rgba(136, 192, 208, 0.2);
+    transition: all 0.2s ease;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Workspaces Module                                   ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#workspaces {
+    padding: 0 5px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @fg;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(136, 192, 208, 0.15);
+    border-bottom: 2px solid @accent;
+}
+
+#workspaces button.active {
+    color: @accent;
+    border-bottom: 2px solid @accent;
+    background-color: rgba(136, 192, 208, 0.2);
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: @urgent;
+    border-bottom: 2px solid @urgent;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Window Title                                        ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#window {
+    color: @fg;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Clock Module                                        ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#clock {
+    color: @accent;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+#clock:hover {
+    background-color: rgba(136, 192, 208, 0.2);
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          CPU Module                                          ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#custom-cpu {
+    color: @success;
+}
+
+#custom-cpu.warning {
+    color: @warning;
+}
+
+#custom-cpu.critical {
+    color: @urgent;
+    animation: blink 1s ease-in-out infinite;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          RAM Module                                          ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#custom-ram {
+    color: @accent;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Power Profile Manager                               ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#custom-power-profile {
+    color: @warning;
+}
+
+#custom-power-profile.performance {
+    color: @urgent;
+}
+
+#custom-power-profile.power-saver {
+    color: @success;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Bluetooth Module                                    ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#bluetooth {
+    color: @accent;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @fg;
+    opacity: 0.5;
+}
+
+#bluetooth.connected {
+    color: @success;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Network Module                                      ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#network {
+    color: @accent;
+}
+
+#network.disconnected {
+    color: @urgent;
+}
+
+#network.ethernet {
+    color: @success;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Audio Module                                        ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#pulseaudio {
+    color: @accent;
+}
+
+#pulseaudio.muted {
+    color: @urgent;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Brightness Module                                   ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#backlight {
+    color: @warning;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Battery Module                                      ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#battery {
+    color: @success;
+}
+
+#battery.charging {
+    color: @success;
+}
+
+#battery.warning:not(.charging) {
+    color: @warning;
+}
+
+#battery.critical:not(.charging) {
+    color: @urgent;
+    animation: blink 1s ease-in-out infinite;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          System Tray                                         ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @urgent;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Power Menu                                          ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#custom-power {
+    color: @urgent;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 12px;
+}
+
+#custom-power:hover {
+    background-color: @urgent;
+    color: @bg;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Animations                                          ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

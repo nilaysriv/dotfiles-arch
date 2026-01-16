@@ -1,0 +1,112 @@
+/*******************************************************************************
+ * ROFI APP LAUNCHER THEME
+ ******************************************************************************/
+
+configuration {
+    font: "JetBrains Mono 11";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: " Apps";
+    drun-display-format: "{name}";
+    modi: "drun";
+    sidebar-mode: false;
+}
+
+* {
+    bg: #0a0e14;
+    bg-alt: #0d1117;
+    fg: #b3b1ad;
+    fg-alt: #848484;
+    accent: #39bae6;
+    urgent: #f07178;
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @bg;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    width: 600px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    padding: 15px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    padding: 10px 15px;
+    spacing: 10px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+    font: "JetBrains Mono Bold 12";
+}
+
+entry {
+    placeholder: "Search applications...";
+    placeholder-color: @fg-alt;
+    text-color: @fg;
+}
+
+message {
+    background-color: @bg-alt;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    margin: 10px 0 0 0;
+    scrollbar: true;
+    fixed-height: false;
+}
+
+scrollbar {
+    handle-width: 6px;
+    handle-color: @accent;
+    background-color: @bg-alt;
+    border-radius: 0px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 8px 12px;
+    spacing: 12px;
+    border-radius: 0px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element-icon {
+    size: 32px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}

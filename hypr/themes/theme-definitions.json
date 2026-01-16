@@ -1,0 +1,514 @@
+{
+    "themes": {
+        "catppuccin-latte": {
+            "name": "Catppuccin Latte",
+            "type": "light",
+            "colors": {
+                "bg": "#eff1f5",
+                "bg-alt": "#e6e9ef",
+                "fg": "#4c4f69",
+                "fg-alt": "#5c5f77",
+                "accent": "#1e66f5",
+                "accent-alt": "#  179299",
+                "urgent": "#d20f39",
+                "warning": "#df8e1d",
+                "success": "#40a02b",
+                "border-active": " #1e66f5",
+                "border-inactive": "#ccd0da"
+            }
+        },
+        "catppuccin-frappe": {
+            "name": "Catppuccin Frappé",
+            "type": "dark",
+            "colors": {
+                "bg": "#303446",
+                "bg-alt": "#292c3c",
+                "fg": "#c6d0f5",
+                "fg-alt": "#b5bfe2",
+                "accent": "#8caaee",
+                "accent-alt": "#99d1db",
+                "urgent": "#e78284",
+                "warning": "#e5c890",
+                "success": "#a6d189",
+                "border-active": "#8caaee",
+                "border-inactive": "#414559"
+            }
+        },
+        "catppuccin-macchiato": {
+            "name": "Catppuccin Macchiato",
+            "type": "dark",
+            "colors": {
+                "bg": "#24273a",
+                "bg-alt": "#1e2030",
+                "fg": "#cad3f5",
+                "fg-alt": "#b8c0e0",
+                "accent": "#8aadf4",
+                "accent-alt": "#91d7e3",
+                "urgent": "#ed8796",
+                "warning": "#eed49f",
+                "success": "#a6da95",
+                "border-active": "#8aadf4",
+                "border-inactive": "#363a4f"
+            }
+        },
+        "catppuccin-mocha": {
+            "name": "Catppuccin Mocha",
+            "type": "dark",
+            "colors": {
+                "bg": "#1e1e2e",
+                "bg-alt": "#181825",
+                "fg": "#cdd6f4",
+                "fg-alt": "#bac2de",
+                "accent": "#89b4fa",
+                "accent-alt": "#89dceb",
+                "urgent": "#f38ba8",
+                "warning": "#f9e2af",
+                "success": "#a6e3a1",
+                "border-active": "#89b4fa",
+                "border-inactive": "#313244"
+            }
+        },
+        "nord": {
+            "name": "Nord",
+            "type": "dark",
+            "colors": {
+                "bg": "#2e3440",
+                "bg-alt": "#3b4252",
+                "fg": "#eceff4",
+                "fg-alt": "#d8dee9",
+                "accent": "#88c0d0",
+                "accent-alt": "#81a1c1",
+                "urgent": "#bf616a",
+                "warning": "#ebcb8b",
+                "success": "#a3be8c",
+                "border-active": "#88c0d0",
+                "border-inactive": "#4c566a"
+            }
+        },
+        "gruvbox-dark": {
+            "name": "Gruvbox Dark",
+            "type": "dark",
+            "colors": {
+                "bg": "#282828",
+                "bg-alt": "#1d2021",
+                "fg": "#ebdbb2",
+                "fg-alt": "#d5c4a1",
+                "accent": "#83a598",
+                "accent-alt": "#8ec07c",
+                "urgent": "#fb4934",
+                "warning": "#fabd2f",
+                "success": "#b8bb26",
+                "border-active": "#83a598",
+                "border-inactive": "#504945"
+            }
+        },
+        "gruvbox-light": {
+            "name": "Gruvbox Light",
+            "type": "light",
+            "colors": {
+                "bg": "#fbf1c7",
+                "bg-alt": "#f9f5d7",
+                "fg": "#3c3836",
+                "fg-alt": "#504945",
+                "accent": "#076678",
+                "accent-alt": "#427b58",
+                "urgent": "#cc241d",
+                "warning": "#d79921",
+                "success": "#79740e",
+                "border-active": "#076678",
+                "border-inactive": "#d5c4a1"
+            }
+        },
+        "solarized-dark": {
+            "name": "Solarized Dark",
+            "type": "dark",
+            "colors": {
+                "bg": "#002b36",
+                "bg-alt": "#073642",
+                "fg": "#839496",
+                "fg-alt": "#657b83",
+                "accent": "#268bd2",
+                "accent-alt": "#2aa198",
+                "urgent": "#dc322f",
+                "warning": "#b58900",
+                "success": "#859900",
+                "border-active": "#268bd2",
+                "border-inactive": "#586e75"
+            }
+        },
+        "solarized-light": {
+            "name": "Solarized Light",
+            "type": "light",
+            "colors": {
+                "bg": "#fdf6e3",
+                "bg-alt": "#eee8d5",
+                "fg": "#657b83",
+                "fg-alt": "#839496",
+                "accent": "#268bd2",
+                "accent-alt": "#2aa198",
+                "urgent": "#dc322f",
+                "warning": "#b58900",
+                "success": "#859900",
+                "border-active": "#268bd2",
+                "border-inactive": "#93a1a1"
+            }
+        },
+        "dracula": {
+            "name": "Dracula",
+            "type": "dark",
+            "colors": {
+                "bg": "#282a36",
+                "bg-alt": "#21222c",
+                "fg": "#f8f8f2",
+                "fg-alt": "#e5e5e5",
+                "accent": "#bd93f9",
+                "accent-alt": "#8be9fd",
+                "urgent": "#ff5555",
+                "warning": "#f1fa8c",
+                "success": "#50fa7b",
+                "border-active": "#bd93f9",
+                "border-inactive": "#44475a"
+            }
+        },
+        "tokyo-night": {
+            "name": "Tokyo Night",
+            "type": "dark",
+            "colors": {
+                "bg": "#1a1b26",
+                "bg-alt": "#16161e",
+                "fg": "#c0caf5",
+                "fg-alt": "#a9b1d6",
+                "accent": "#7aa2f7",
+                "accent-alt": "#7dcfff",
+                "urgent": "#f7768e",
+                "warning": "#e0af68",
+                "success": "#9ece6a",
+                "border-active": "#7aa2f7",
+                "border-inactive": "#414868"
+            }
+        },
+        "rose-pine": {
+            "name": "Rose Pine Base",
+            "type": "dark",
+            "colors": {
+                "bg": "#191724",
+                "bg-alt": "#1f1d2e",
+                "fg": "#e0def4",
+                "fg-alt": "#c3c1db",
+                "accent": "#c4a7e7",
+                "accent-alt": "#9ccfd8",
+                "urgent": "#eb6f92",
+                "warning": "#f6c177",
+                "success": "#31748f",
+                "border-active": "#c4a7e7",
+                "border-inactive": "#26233a"
+            }
+        },
+        "rose-pine-moon": {
+            "name": "Rose Pine Moon",
+            "type": "dark",
+            "colors": {
+                "bg": "#232136",
+                "bg-alt": "#2a273f",
+                "fg": "#e0def4",
+                "fg-alt": "#c3c1db",
+                "accent": "#c4a7e7",
+                "accent-alt": "#9ccfd8",
+                "urgent": "#eb6f92",
+                "warning": "#f6c177",
+                "success": "#3e8fb0",
+                "border-active": "#c4a7e7",
+                "border-inactive": "#393552"
+            }
+        },
+        "rose-pine-dawn": {
+            "name": "Rose Pine Dawn",
+            "type": "light",
+            "colors": {
+                "bg": "#faf4ed",
+                "bg-alt": "#fffaf3",
+                "fg": "#575279",
+                "fg-alt": "#6e6a86",
+                "accent": "#907aa9",
+                "accent-alt": "#56949f",
+                "urgent": "#b4637a",
+                "warning": "#ea9d34",
+                "success": "#286983",
+                "border-active": "#907aa9",
+                "border-inactive": "#dfdad9"
+            }
+        },
+        "everforest": {
+            "name": "Everforest",
+            "type": "dark",
+            "colors": {
+                "bg": "#2d353b",
+                "bg-alt": "#272e33",
+                "fg": "#d3c6aa",
+                "fg-alt": "#baa89f",
+                "accent": "#7fbbb3",
+                "accent-alt": "#83c092",
+                "urgent": "#e67e80",
+                "warning": "#dbbc7f",
+                "success": "#a7c080",
+                "border-active": "#7fbbb3",
+                "border-inactive": "#475258"
+            }
+        },
+        "kanagawa": {
+            "name": "Kanagawa",
+            "type": "dark",
+            "colors": {
+                "bg": "#1f1f28",
+                "bg-alt": "#16161d",
+                "fg": "#dcd7ba",
+                "fg-alt": "#c8c093",
+                "accent": "#7e9cd8",
+                "accent-alt": "#7fb4ca",
+                "urgent": "#c34043",
+                "warning": "#ffa066",
+                "success": "#76946a",
+                "border-active": "#7e9cd8",
+                "border-inactive": "#2a2a37"
+            }
+        },
+        "one-dark": {
+            "name": "One Dark",
+            "type": "dark",
+            "colors": {
+                "bg": "#282c34",
+                "bg-alt": "#21252b",
+                "fg": "#abb2bf",
+                "fg-alt": "#5c6370",
+                "accent": "#61afef",
+                "accent-alt": "#56b6c2",
+                "urgent": "#e06c75",
+                "warning": "#e5c07b",
+                "success": "#98c379",
+                "border-active": "#61afef",
+                "border-inactive": "#3e4451"
+            }
+        },
+        "one-light": {
+            "name": "One Light",
+            "type": "light",
+            "colors": {
+                "bg": "#fafafa",
+                "bg-alt": "#f0f0f0",
+                "fg": "#383a42",
+                "fg-alt": "#696c77",
+                "accent": "#4078f2",
+                "accent-alt": "#0184bc",
+                "urgent": "#e45649",
+                "warning": "#986801",
+                "success": "#50a14f",
+                "border-active": "#4078f2",
+                "border-inactive": "#e5e5e6"
+            }
+        },
+        "monokai-pro": {
+            "name": "Monokai Pro",
+            "type": "dark",
+            "colors": {
+                "bg": "#2d2a2e",
+                "bg-alt": "#221f22",
+                "fg": "#fcfcfa",
+                "fg-alt": "#d6d6d6",
+                "accent": "#ffd866",
+                "accent-alt": "#78dce8",
+                "urgent": "#ff6188",
+                "warning": "#fc9867",
+                "success": "#a9dc76",
+                "border-active": "#ffd866",
+                "border-inactive": "#5b595c"
+            }
+        },
+        "ayu-light": {
+            "name": "Ayu Light",
+            "type": "light",
+            "colors": {
+                "bg": "#fafafa",
+                "bg-alt": "#f3f4f5",
+                "fg": "#5c6166",
+                "fg-alt": "#828c99",
+                "accent": "#399ee6",
+                "accent-alt": "#4cbf99",
+                "urgent": "#f07171",
+                "warning": "#fa8d3e",
+                "success": "#86b300",
+                "border-active": "#399ee6",
+                "border-inactive": "#d9d9d9"
+            }
+        },
+        "ayu-mirage": {
+            "name": "Ayu Mirage",
+            "type": "dark",
+            "colors": {
+                "bg": "#1f2430",
+                "bg-alt": "#191e2a",
+                "fg": "#cbccc6",
+                "fg-alt": "#b8b8b8",
+                "accent": "#5ccfe6",
+                "accent-alt": "#95e6cb",
+                "urgent": "#f28779",
+                "warning": "#ffd173",
+                "success": "#bae67e",
+                "border-active": "#5ccfe6",
+                "border-inactive": "#33415e"
+            }
+        },
+        "ayu-dark": {
+            "name": "Ayu Dark",
+            "type": "dark",
+            "colors": {
+                "bg": "#0a0e14",
+                "bg-alt": "#0d1117",
+                "fg": "#b3b1ad",
+                "fg-alt": "#848484",
+                "accent": "#39bae6",
+                "accent-alt": "#7fd962",
+                "urgent": "#f07178",
+                "warning": "#ffb454",
+                "success": "#c2d94c",
+                "border-active": "#39bae6",
+                "border-inactive": "#1f2430"
+            }
+        },
+        "oxocarbon": {
+            "name": "Oxocarbon",
+            "type": "dark",
+            "colors": {
+                "bg": "#161616",
+                "bg-alt": "#262626",
+                "fg": "#f2f4f8",
+                "fg-alt": "#dde1e6",
+                "accent": "#78a9ff",
+                "accent-alt": "#3ddbd9",
+                "urgent": "#ee5396",
+                "warning": "#ff832b",
+                "success": "#42be65",
+                "border-active": "#78a9ff",
+                "border-inactive": "#393939"
+            }
+        },
+        "night-owl": {
+            "name": "Night Owl",
+            "type": "dark",
+            "colors": {
+                "bg": "#011627",
+                "bg-alt": "#0b2942",
+                "fg": "#d6deeb",
+                "fg-alt": "#c5cad8",
+                "accent": "#82aaff",
+                "accent-alt": "#7fdbca",
+                "urgent": "#ef5350",
+                "warning": "#f78c6c",
+                "success": "#addb67",
+                "border-active": "#82aaff",
+                "border-inactive": "#1d3b53"
+            }
+        },
+        "material-palenight": {
+            "name": "Material Palenight",
+            "type": "dark",
+            "colors": {
+                "bg": "#292d3e",
+                "bg-alt": "#1b1e2b",
+                "fg": "#a6accd",
+                "fg-alt": "#8796b0",
+                "accent": "#82aaff",
+                "accent-alt": "#89ddff",
+                "urgent": "#f07178",
+                "warning": "#ffcb6b",
+                "success": "#c3e88d",
+                "border-active": "#82aaff",
+                "border-inactive": "#3a3f58"
+            }
+        },
+        "synthwave-84": {
+            "name": "SynthWave '84",
+            "type": "dark",
+            "colors": {
+                "bg": "#262335",
+                "bg-alt": "#1a1a2e",
+                "fg": "#f4eee4",
+                "fg-alt": "#e0dfe8",
+                "accent": "#ff7edb",
+                "accent-alt": "#36f9f6",
+                "urgent": "#fe4450",
+                "warning": "#fede5d",
+                "success": "#72f1b8",
+                "border-active": "#ff7edb",
+                "border-inactive": "#48425d"
+            }
+        },
+        "tomorrow-night": {
+            "name": "Tomorrow Night",
+            "type": "dark",
+            "colors": {
+                "bg": "#1d1f21",
+                "bg-alt": "#282a2e",
+                "fg": "#c5c8c6",
+                "fg-alt": "#b4b7b4",
+                "accent": "#81a2be",
+                "accent-alt": "#8abeb7",
+                "urgent": "#cc6666",
+                "warning": "#f0c674",
+                "success": "#b5bd68",
+                "border-active": "#81a2be",
+                "border-inactive": "#373b41"
+            }
+        },
+        "forest-night": {
+            "name": "Forest Night",
+            "type": "dark",
+            "colors": {
+                "bg": "#323d43",
+                "bg-alt": "#2e383c",
+                "fg": "#d8caac",
+                "fg-alt": "#c5b8a0",
+                "accent": "#83c092",
+                "accent-alt": "#7fbbb3",
+                "urgent": "#e67e80",
+                "warning": "#dbbc7f",
+                "success": "#a7c080",
+                "border-active": "#83c092",
+                "border-inactive": "#4a555b"
+            }
+        },
+        "papercolor": {
+            "name": "PaperColor",
+            "type": "light",
+            "colors": {
+                "bg": "#eeeeee",
+                "bg-alt": "#e4e4e4",
+                "fg": "#444444",
+                "fg-alt": "#5f5f5f",
+                "accent": "#005f87",
+                "accent-alt": "#008787",
+                "urgent": "#af0000",
+                "warning": "#d75f00",
+                "success": "#008700",
+                "border-active": "#005f87",
+                "border-inactive": "#d0d0d0"
+            }
+        },
+        "zenburn": {
+            "name": "Zenburn",
+            "type": "dark",
+            "colors": {
+                "bg": "#3f3f3f",
+                "bg-alt": "#313131",
+                "fg": "#dcdccc",
+                "fg-alt": "#c8c8b8",
+                "accent": "#8cd0d3",
+                "accent-alt": "#7cb8bb",
+                "urgent": "#dca3a3",
+                "warning": "#f0dfaf",
+                "success": "#bfebbf",
+                "border-active": "#8cd0d3",
+                "border-inactive": "#6f6f6f"
+            }
+        }
+    }
+}
