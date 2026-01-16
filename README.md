@@ -3,6 +3,10 @@ My Personal Configuration for Arch Linux using the Hyprland compositor.
 ---
 
 ##  Gallery
+![Dots](Screenshots/1.png)
+![Dots](Screenshots/2.png)
+![Dots](Screenshots/3.png)
+![Dots](Screenshots/4.png)
 
 ---
 
