@@ -1,11 +1,14 @@
 # Arch Linux + Hyprland Dotfiles
 My Personal Configuration for Arch Linux using the Hyprland compositor.
----
+Pretty Lightweight and looks good too :)
 
 ##  Gallery
+![Dots](Screenshots/1.png)
+![Dots](Screenshots/2.png)
+![Dots](Screenshots/3.png)
+![Dots](Screenshots/4.png)
 
 ---
-
 ##  Components
 
 | Component | Application |
@@ -40,6 +43,11 @@ sudo pacman -S --needed - < package_list.txt
 
 # Or if you use an AUR helper like yay
 yay -S --needed - < package_list.txt
+
+#For the ZSH plugins
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ### 3. Apply Configurations
@@ -84,6 +92,39 @@ Most keybindings use `SUPER` (Windows Key) as the main modifier. See `hypr/keybi
 
 ---
 
+## Color Schemes available
+```
+Catppuccin Latte
+Catppuccin Frappé
+Catppuccin Macchiato
+Catppuccin Mocha
+Nord
+Gruvbox Dark
+Gruvbox Light
+Solarized Dark
+Solarized Light
+Dracula
+Tokyo Night
+Rose Pine Base
+Rose Pine Moon
+Rose Pine Dawn
+Everforest
+Kanagawa
+One Dark
+One Light
+Monokai Pro
+Ayu Light
+Ayu Mirage
+Ayu Dark
+Oxocarbon
+Night Owl
+Material Palenight
+SynthWave '84
+Tomorrow Night
+Forest Night
+PaperColor
+Zenburn
+```
 ## Directory Structure
 - `hypr/`: Hyprland configuration (animations, monitors, rules, etc.).
 - `waybar/`: Status bar configuration and style.
