@@ -509,6 +509,23 @@
                 "border-active": "#8cd0d3",
                 "border-inactive": "#6f6f6f"
             }
+        },
+        "monochrome": {
+            "name": "Monochrome",
+            "type": "dark",
+            "colors": {
+                "bg": "#1a1a1a",
+                "bg-alt": "#2d2d2d",
+                "fg": "#e8e8e8",
+                "fg-alt": "#b8b8b8",
+                "accent": "#ffffff",
+                "accent-alt": "#d0d0d0",
+                "urgent": "#ff4444",
+                "warning": "#cccccc",
+                "success": "#b0b0b0",
+                "border-active": "#ffffff",
+                "border-inactive": "#4a4a4a"
+            }
         }
     }
 }

@@ -26,9 +26,11 @@
 }
 
 window#waybar {
-    background-color: @bg;
+    background-color: rgba(46, 52, 64, 0.92);
     color: @fg;
     border-bottom: 2px solid @accent;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition-property: background-color;
     transition-duration: 0.3s;
 }
@@ -64,8 +66,10 @@ tooltip label {
 #tray,
 #custom-power {
     background-color: @bg-dark;
-    padding: 0 12px;
-    margin: 4px 0;
+    padding: 4px 14px;
+    margin: 5px 3px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Hover effect for interactive modules */
@@ -78,8 +82,9 @@ tooltip label {
 #backlight:hover,
 #battery:hover,
 #custom-power:hover {
-    background-color: rgba(136, 192, 208, 0.2);
-    transition: all 0.2s ease;
+    background-color: rgba(136, 192, 208, 0.25);
+    box-shadow: 0 2px 6px rgba(136, 192, 208, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -87,26 +92,26 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #workspaces {
-    padding: 0 5px;
+    padding: 2px 8px;
+    margin: 5px 3px;
 }
 
 #workspaces button {
-    padding: 0 8px;
+    padding: 4px 10px;
+    margin: 2px 3px;
     color: @fg;
     background-color: transparent;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #workspaces button:hover {
-    background-color: rgba(136, 192, 208, 0.15);
-    border-bottom: 2px solid @accent;
+    background-color: rgba(136, 192, 208, 0.25);
 }
 
 #workspaces button.active {
-    color: @accent;
-    border-bottom: 2px solid @accent;
-    background-color: rgba(136, 192, 208, 0.2);
+    color: @bg;
+    background-color: @accent;
     font-weight: bold;
 }
 
@@ -122,7 +127,8 @@ tooltip label {
 #window {
     color: @fg;
     font-weight: 500;
-    padding: 0 15px;
+    padding: 4px 16px;
+    margin: 5px 8px;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -132,7 +138,7 @@ tooltip label {
 #clock {
     color: @accent;
     font-weight: 600;
-    padding: 0 15px;
+    padding: 4px 16px;
 }
 
 #clock:hover {

@@ -20,12 +20,14 @@ gvfs-smb
 hypridle
 hyprland
 hyprlock
+hyprsunset
 jq
 kdeconnect
 kitty
 lxappearance
 nano
 nemo
+nemo-fileroller
 networkmanager
 nm-connection-editor
 noto-fonts
