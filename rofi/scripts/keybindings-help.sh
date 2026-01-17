@@ -51,10 +51,11 @@ parse_keybinds() {
             
             # Extract description from action (prefer comments on the same line)
             local description=""
-            if [[ "$line" =~ #[[:space:]]*(.+)$ ]]; then
-                description="${BASH_REMATCH[1]}"
+            # Check if line contains a comment
+            if echo "$line" | grep -q '#'; then
+                description=$(echo "$line" | sed 's/.*#[[:space:]]*//')
             else
-                # Try to infer from exec command
+                # Try to infer from action
                 if [[ "$action" =~ exec,[[:space:]]*(.+) ]]; then
                     local cmd="${BASH_REMATCH[1]}"
                     description=$(basename "$cmd" | sed 's/\.sh$//')
