@@ -10,10 +10,10 @@ configuration {
 }
 
 * {
-    bg: #0a0e14;
-    bg-alt: #0d1117;
-    fg: #b3b1ad;
-    accent: #39bae6;
+    bg: #2e3440;
+    bg-alt: #3b4252;
+    fg: #eceff4;
+    accent: #88c0d0;
     
     background-color: transparent;
     text-color: @fg;

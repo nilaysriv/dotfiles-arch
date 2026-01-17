@@ -73,19 +73,19 @@
 
 # Theme colors - Auto-updated by theme switcher
 [urgency_low]
-    background = "#0a0e14"
-    foreground = "#b3b1ad"
-    frame_color = "#39bae6"
+    background = "#2e3440"
+    foreground = "#eceff4"
+    frame_color = "#88c0d0"
     timeout = 5
     
 [urgency_normal]
-    background = "#0a0e14"
-    foreground = "#b3b1ad"
-    frame_color = "#39bae6"
+    background = "#2e3440"
+    foreground = "#eceff4"
+    frame_color = "#88c0d0"
     timeout = 10
     
 [urgency_critical]
-    background = "#0a0e14"
-    foreground = "#b3b1ad"
-    frame_color = "#f07178"
+    background = "#2e3440"
+    foreground = "#eceff4"
+    frame_color = "#bf616a"
     timeout = 0

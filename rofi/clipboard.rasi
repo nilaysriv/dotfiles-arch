@@ -1,11 +1,12 @@
 /*******************************************************************************
- * ROFI KEYBINDINGS HELP THEME
- * Wide display for keybindings reference
+ * ROFI CLIPBOARD HISTORY THEME
  ******************************************************************************/
 
 configuration {
-    font: "JetBrains Mono 10";
+    font: "JetBrains Mono 11";
     show-icons: false;
+    display-clipboard: "󰅇 Clipboard";
+    modi: "clipboard";
     sidebar-mode: false;
 }
 
@@ -13,7 +14,9 @@ configuration {
     bg: #2e3440;
     bg-alt: #3b4252;
     fg: #eceff4;
+    fg-alt: #d8dee9;
     accent: #88c0d0;
+    urgent: #bf616a;
     
     background-color: transparent;
     text-color: @fg;
@@ -27,7 +30,7 @@ window {
     border: 2px solid;
     border-color: @accent;
     border-radius: 0px;
-    width: 900px;
+    width: 700px;
     location: center;
     anchor: center;
 }
@@ -40,9 +43,10 @@ inputbar {
     background-color: @bg-alt;
     border: 2px solid;
     border-color: @accent;
+    border-radius: 0px;
     padding: 10px 15px;
-    margin: 0 0 10px 0;
-    children: [ prompt ];
+    spacing: 10px;
+    children: [ prompt, entry ];
 }
 
 prompt {
@@ -50,13 +54,29 @@ prompt {
     font: "JetBrains Mono Bold 12";
 }
 
+entry {
+    placeholder: "Search clipboard history...";
+    placeholder-color: @fg-alt;
+    text-color: @fg;
+}
+
+message {
+    background-color: @bg-alt;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+
 listview {
     background-color: transparent;
     columns: 1;
-    lines: 20;
-    spacing: 0px;
+    lines: 12;
+    spacing: 3px;
+    margin: 10px 0 0 0;
     scrollbar: true;
-    fixed-height: true;
+    fixed-height: false;
 }
 
 scrollbar {
@@ -69,8 +89,13 @@ scrollbar {
 element {
     background-color: transparent;
     text-color: @fg;
-    padding: 3px 10px;
+    padding: 6px 12px;
     border-radius: 0px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
 }
 
 element-text {
