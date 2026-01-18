@@ -1,5 +1,6 @@
 7zip
 asusctl
+archlinux-xdg-menu
 blueman
 brightnessctl
 btop
