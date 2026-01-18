@@ -70,6 +70,13 @@ cp -r fastfetch ~/.config/
 
 # Copy .zshrc to home
 cp .zshrc ~/.zshrc
+
+# Copy GTK settings
+cp -r gtk-3.0 ~/.config/
+cp -r gtk-4.0 ~/.config/
+
+# Configure Flatpak themes (optional, if you use Flatpak apps)
+./flatpak/setup-flatpak-themes.sh
 ```
 
 ---
