@@ -61,19 +61,11 @@ mv ~/.config/waybar ~/config_backup/
 # ... repeat for others
 
 # Copy new configs
-cp -r hypr ~/.config/
-cp -r waybar ~/.config/
-cp -r kitty ~/.config/
-cp -r rofi ~/.config/
-cp -r dunst ~/.config/
-cp -r fastfetch ~/.config/
+cp -r * ~/.config/
+
 
 # Copy .zshrc to home
 cp .zshrc ~/.zshrc
-
-# Copy GTK settings
-cp -r gtk-3.0 ~/.config/
-cp -r gtk-4.0 ~/.config/
 
 # Configure Flatpak themes (optional, if you use Flatpak apps)
 ./flatpak/setup-flatpak-themes.sh
