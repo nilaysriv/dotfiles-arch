@@ -1,0 +1,10 @@
+[General]
+Version=202
+ViewPropsTimestamp=2026,1,18,5,33,32.606
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[UiSettings] 
+ColorScheme=Theme Name 
