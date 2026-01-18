@@ -79,6 +79,7 @@ Most keybindings use `SUPER` (Windows Key) as the main modifier. See `hypr/keybi
 | Key | Action |
 |-----|--------|
 | `SUPER` + `Return` / `T` | Open Terminal (Kitty) |
+| `SUPER` + `F1` | Open Keybinds list |
 | `SUPER` + `Space` | App Launcher (Rofi) |
 | `SUPER` + `E` | File Manager (Nautilus) |
 | `SUPER` + `B` | Open Browser |
