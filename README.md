@@ -23,7 +23,7 @@ Pretty Lightweight and looks good too :)
 | **Lock Screen** | Hyprlock |
 | **Idle Daemon** | Hypridle |
 | **Wallpaper** | swww / Waypaper |
-| **File Manager** | Nautilus |
+| **File Manager** | Dolphin |
 
 ---
 
