@@ -61,6 +61,7 @@ tooltip label {
 #pulseaudio,
 #backlight,
 #battery,
+#custom-notification,
 #tray,
 #custom-power {
     padding: 4px 12px;
@@ -76,6 +77,7 @@ tooltip label {
 #pulseaudio:hover,
 #backlight:hover,
 #battery:hover,
+#custom-notification:hover,
 #custom-power:hover {
     background-color: rgba(136, 192, 208, 0.15);
     transition: background-color 0.2s ease;
@@ -252,6 +254,24 @@ tooltip label {
 #battery.critical:not(.charging) {
     color: @urgent;
     animation: blink 1s ease-in-out infinite;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Notification Center                                 ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#custom-notification {
+    color: @accent;
+}
+
+#custom-notification.has-notifications {
+    color: @warning;
+    font-weight: bold;
+}
+
+#custom-notification.no-notifications {
+    color: @fg;
+    opacity: 0.7;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗

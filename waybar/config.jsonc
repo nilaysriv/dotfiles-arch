@@ -20,6 +20,7 @@
         "pulseaudio",
         "backlight",
         "battery",
+        "custom/notification",
         "tray",
         "custom/power"
     ],
@@ -184,6 +185,16 @@
             "󰁹"
         ],
         "tooltip-format": "{timeTo}\n{power}W"
+    },
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                          Notification Center                             ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+    "custom/notification": {
+        "exec": "count=$(dunstctl count waiting); if [ \"$count\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"󰂚 $count\\\",\\\"tooltip\\\":\\\"$count notifications\\\",\\\"class\\\":\\\"has-notifications\\\"}\"; else echo \"{\\\"text\\\":\\\"󰂚\\\",\\\"tooltip\\\":\\\"No notifications\\\",\\\"class\\\":\\\"no-notifications\\\"}\"; fi",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "~/.config/waybar/scripts/notification-center.sh",
+        "on-click-right": "dunstctl history-clear"
     },
     // ╔══════════════════════════════════════════════════════════════════════════╗
     // ║                          System Tray                                     ║

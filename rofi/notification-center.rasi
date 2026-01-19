@@ -1,0 +1,101 @@
+/*******************************************************************************
+ * ROFI NOTIFICATION CENTER THEME
+ * Theme for dunst notification history
+ ******************************************************************************/
+
+configuration {
+    font: "JetBrains Mono 11";
+    show-icons: false;
+    sidebar-mode: false;
+}
+
+* {
+    bg: #2e3440;
+    bg-alt: #3b4252;
+    fg: #eceff4;
+    fg-alt: #d8dee9;
+    accent: #88c0d0;
+    urgent: #bf616a;
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @bg;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    width: 500px;
+    location: northeast;
+    anchor: northeast;
+    x-offset: -10;
+    y-offset: 50;
+}
+
+mainbox {
+    padding: 15px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    padding: 10px 15px;
+    margin: 0 0 10px 0;
+    children: [ prompt ];
+}
+
+prompt {
+    text-color: @accent;
+    font: "JetBrains Mono Bold 12";
+}
+
+message {
+    background-color: @bg-alt;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 0px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+textbox {
+    text-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    scrollbar: true;
+    fixed-height: false;
+}
+
+scrollbar {
+    handle-width: 6px;
+    handle-color: @accent;
+    background-color: @bg-alt;
+    border-radius: 0px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 10px 15px;
+    border-radius: 0px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element-text {
+    text-color: inherit;
+}
