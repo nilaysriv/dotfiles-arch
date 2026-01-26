@@ -22,6 +22,9 @@ flatpak override --user --env=GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2
 echo "  → Enabling GTK portal..."
 flatpak override --user --env=GTK_USE_PORTAL=1
 
+echo "  → Configuring XDG portal preference..."
+flatpak override --user --env=XDG_CURRENT_DESKTOP=KDE
+
 # Grant filesystem access for themes and configs
 echo "  → Granting filesystem access for themes..."
 flatpak override --user --filesystem=xdg-config/Kvantum:ro

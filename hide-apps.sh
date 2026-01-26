@@ -13,6 +13,13 @@ APPS_TO_HIDE=(
     "bssh.desktop"
     "bvnc.desktop"
     "nm-connection-editor.desktop"
+    # Avahi Zeroconf Browser
+    "avahi-discover.desktop"
+    # Qt Development Tools
+    "assistant.desktop"
+    "designer.desktop"
+    "linguist.desktop"
+    "qdbusviewer.desktop"
 )
 
 TARGET_DIR="$HOME/.local/share/applications"

@@ -514,7 +514,7 @@
             "name": "Monochrome",
             "type": "dark",
             "colors": {
-                "bg": "#1a1a1a",
+                "bg": "#000000",
                 "bg-alt": "#2d2d2d",
                 "fg": "#e8e8e8",
                 "fg-alt": "#b8b8b8",

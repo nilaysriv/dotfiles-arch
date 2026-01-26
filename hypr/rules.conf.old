@@ -1,108 +1,128 @@
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          Autostart Configuration                             ║
-# ║                    Applications to start with Hyprland                       ║
+# ║                          Window Rules Configuration                          ║
+# ║                            Using windowrule Syntax                           ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
-
-# Syntax: exec-once = command
-# These commands run once when Hyprland starts
-
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                              Core Services                                   ║
+# ║                               KDE Applications                               ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# Environment and XDG Portal
-exec-once = ~/.config/hypr/scripts/xdg-portal.sh &
-
-
-# Agents and Daemons
-#exec-once = /usr/lib/polkit-kde-authentication-agent-1
-exec-once = kwalletd6
-exec-once = systemctl --user start hyprpolkitagent
-# ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                           Status Bar & Notifications                         ║
-# ╚══════════════════════════════════════════════════════════════════════════════╝
-
-# Waybar (status bar)
-exec-once = waybar
-
-# Dunst (notification daemon)
-exec-once = dunst
-
+windowrule {
+    match:class = ^(org.kde.kdeconnect)
+    float = on
+    size = 500 600
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          Wallpaper Management                                ║
+# ║                             System Applications                              ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# swww daemon (wallpaper daemon)
-exec-once = swww-daemon
+windowrule {
+    match:class = ^(nm-connection-editor)$
+    float = on
+    size = 600 500
+    center = on
+}
 
-# Initialize wallpaper (load last used or default)
-exec-once = sleep 1 && ~/.config/hypr/scripts/wallpaper-init.sh
+windowrule {
+    match:class = ^(blueman-manager)$
+    float = on
+    size = 800 600
+    center = on
+}
 
+windowrule {
+    match:class = ^(blueman-adapters)$
+    float = on
+}
+
+windowrule {
+    match:class = ^(pavucontrol)$
+    float = on
+    size = 800 600
+    center = on
+}
+
+windowrule {
+    match:title = ^(btop)$
+    float = on
+    size = 1200 800
+    center = on
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                              Idle & Lock                                     ║
+# ║                                 Rofi Windows                                 ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# Hypridle (idle daemon for auto-lock and screen off)
-exec-once = hypridle
-
-# Hyprsunset (gamma filter)
-exec-once = hyprsunset
+windowrule {
+    match:class = ^(Rofi)$
+    float = on
+    stayfocused = on
+    noborder = on
+    dimaround = on
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          Clipboard Management                                ║
+# ║                          Waypaper (Wallpaper Picker)                         ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# Start clipboard history daemon
-exec-once = wl-paste --type text --watch cliphist store
-exec-once = wl-paste --type image --watch cliphist store
-
+windowrule {
+    match:class = ^(waypaper)$
+    float = on
+    size = 1000 700
+    center = on
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          KDE Integration                                     ║
+# ║                             Flatpak Applications                             ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# KDE Connect (device integration)
-exec-once = /usr/lib/kdeconnectd
-
-# KDE Connect Indicator (system tray)
-exec-once = kdeconnect-indicator
-
+windowrule {
+    match:class = ^(me.kozec.syncthingtk)$
+    float = on
+    size = 900 700
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          Flatpak Applications                                ║
+# ║                             Notification Daemon                              ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# Syncthing GTK (file synchronization)
-#exec-once = flatpak run me.kozec.syncthingtk
-
+windowrule {
+    match:class = ^(dunst)$
+    float = on
+    noborder = on
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          Network & Bluetooth                                 ║
+# ║                              Picture-in-Picture                              ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# NetworkManager applet is NOT started here because Waybar has a network module
-# Blueman applet is NOT started here because Waybar has a bluetooth module
+windowrule {
+    match:title = ^(Picture-in-Picture)$
+    float = on
+    pin = on
+    size = 640 360
+}
 
-# However, we ensure the services are running
-exec-once = systemctl --user start bluetooth.service
-
+windowrule {
+    match:title = ^(.*is sharing your screen)$
+    float = on
+    move = 0 0
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          User Applications                                   ║
+# ║                               Dialog Windows                                 ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# You can add your own applications here, for example:
-# exec-once = discord --start-minimized
-# exec-once = spotify
-# exec-once = steam -silent
-
+windowrule {
+    match:title = ^(Open File|Save File|Save As|Choose File|Select File)$
+    float = on
+    center = on
+}
 
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║                          Restore Last Session                                ║
+# ║                          Layer Rules (for overlays)                          ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
-# Restore previous session (optional, uncomment if desired)
-# exec-once = ~/.config/hypr/scripts/restore-session.sh
+layerrule = blur on, match:namespace waybar
+layerrule = blur on, match:namespace rofi

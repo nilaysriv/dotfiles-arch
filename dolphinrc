@@ -1,10 +1,22 @@
+[ContextMenu]
+ShowOpenTerminal=false
+
 [General]
+GlobalViewProps=false
+RememberOpenedTabs=false
+ShowToolTips=true
 Version=202
 ViewPropsTimestamp=2026,1,18,5,33,32.606
+
+[InformationPanel]
+previewsShown=false
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
-[UiSettings] 
-ColorScheme=Theme Name 
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,glycin-svg,svgthumbnail
+
+[UiSettings]
+ColorScheme=Kvantum
