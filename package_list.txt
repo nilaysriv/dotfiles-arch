@@ -23,6 +23,7 @@ hypridle
 hyprland
 hyprlock
 hyprsunset
+hyprpolkitagent
 jq
 kdeconnect
 kitty
