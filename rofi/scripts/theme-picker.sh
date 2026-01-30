@@ -97,7 +97,8 @@ if [ -f "$HOME/.config/dunst/dunstrc" ]; then
     sed -i "/^\[urgency_critical\]/,/^\$/ { s/background = .*/background = \"$bg\"/; s/foreground = .*/foreground = \"$fg\"/; s/frame_color = .*/frame_color = \"$urgent\"/; }" "$HOME/.config/dunst/dunstrc"
     
     # Reload dunst
-    killall dunst
+    killall dunst 2>/dev/null
+    dunst &
 fi
 
 # Update all Rofi themes

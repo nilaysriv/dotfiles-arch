@@ -1,7 +1,11 @@
 [ContextMenu]
 ShowOpenTerminal=false
 
+[DetailsMode]
+PreviewSize=22
+
 [General]
+BrowseThroughArchives=true
 GlobalViewProps=false
 RememberOpenedTabs=false
 ShowToolTips=true
@@ -17,6 +21,3 @@ Places Icons Static Size=22
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,glycin-svg,svgthumbnail
-
-[UiSettings]
-ColorScheme=Kvantum

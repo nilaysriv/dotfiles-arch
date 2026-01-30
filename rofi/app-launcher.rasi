@@ -5,7 +5,7 @@
 configuration {
     font: "JetBrains Mono 11";
     show-icons: true;
-    icon-theme: "Papirus-Dark";
+    icon-theme: "breeze-dark";
     display-drun: " Apps";
     drun-display-format: "{name}";
     modi: "drun";
@@ -13,12 +13,12 @@ configuration {
 }
 
 * {
-    bg: #0a0e14;
-    bg-alt: #0d1117;
-    fg: #b3b1ad;
-    fg-alt: #848484;
-    accent: #39bae6;
-    urgent: #f07178;
+    bg: #000000;
+    bg-alt: #2d2d2d;
+    fg: #e8e8e8;
+    fg-alt: #b8b8b8;
+    accent: #ffffff;
+    urgent: #ff4444;
     
     background-color: transparent;
     text-color: @fg;

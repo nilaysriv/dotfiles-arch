@@ -578,12 +578,29 @@
         "border-inactive": "#4d4d80"
       }
     },
-    "minimal-kiwi": {
-      "name": "Minimal Kiwi",
+    "blood": {
+      "name": "Blood",
       "type": "dark",
       "colors": {
-        "bg": "#050605",
-        "bg-alt": "#0d0f0d",
+        "bg": "#000000",
+        "bg-alt": "#121212",
+        "fg": "#f27979",
+        "fg-alt": "#f76f6f",
+        "accent": "#ff0000",
+        "accent-alt": "#cc0000",
+        "urgent": "#ad0000",
+        "warning": "#ffc400",
+        "success": "#0aa600",
+        "border-active": "#ff0000",
+        "border-inactive": "#f27979"
+      }
+    },
+    "minimal-kiwi": {
+      "name": "Minimal Kiwi",  
+      "type": "dark",
+      "colors": {
+        "bg": "#191919",
+        "bg-alt": "#333333",
         "fg": "#fdfdfb",
         "fg-alt": "#abab97",
         "accent": "#40dc1d",

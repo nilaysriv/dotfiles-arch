@@ -44,6 +44,7 @@ pipewire-pulse
 polkit-kde-agent
 power-profiles-daemon
 rofi
+breeze
 breeze-gtk
 breeze-icons
 slurp

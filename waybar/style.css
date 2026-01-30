@@ -4,13 +4,13 @@
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Global Variables - Auto-updated by theme switcher */
-@define-color bg #0a0e14;
+@define-color bg #000000;
 @define-color bg-dark #242933;
-@define-color fg #b3b1ad;
-@define-color accent #39bae6;
-@define-color urgent #f07178;
-@define-color warning #ffb454;
-@define-color success #c2d94c;
+@define-color fg #e8e8e8;
+@define-color accent #ffffff;
+@define-color urgent #ff4444;
+@define-color warning #cccccc;
+@define-color success #b0b0b0;
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
    ║                          Global Styles                                       ║
