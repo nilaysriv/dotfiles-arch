@@ -1,35 +1,34 @@
 #!/usr/bin/env bash
 
 # XDG Desktop Portal setup script for Hyprland with KDE integration
-# Ensures KDE portal is used for file dialogs and other portal interfaces
+# Ensures proper portal setup for file dialogs, AppChooser (Open With), etc.
 
-# Update D-Bus activation environment
-#dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-#systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-
-# Stop any conflicting portal implementations
-#systemctl --user stop xdg-desktop-portal-gtk.service 2>/dev/null || true
-
-# Restart portal services in correct order
-#systemctl --user restart xdg-desktop-portal-kde.service
-#systemctl --user restart xdg-desktop-portal-hyprland.service
-#systemctl --user restart xdg-desktop-portal.service
-
-
-#dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-#systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 sleep 1
-# Kill all possible running portals
-killall -e xdg-desktop-portal-hyprland
-killall -e xdg-desktop-portal-kde
-killall -e xdg-desktop-portal-gtk
-killall -e xdg-desktop-portal
+
+# Stop any manually running portals and systemd services
+killall -e xdg-desktop-portal-hyprland 2>/dev/null || true
+killall -e xdg-desktop-portal-kde 2>/dev/null || true
+killall -e xdg-desktop-portal-gtk 2>/dev/null || true
+killall -e xdg-desktop-portal 2>/dev/null || true
+
+systemctl --user stop xdg-desktop-portal.service 2>/dev/null || true
+systemctl --user stop xdg-desktop-portal-hyprland.service 2>/dev/null || true
+systemctl --user stop xdg-desktop-portal-gtk.service 2>/dev/null || true
+systemctl --user stop plasma-xdg-desktop-portal-kde.service 2>/dev/null || true
+
+sleep 1
 
 # Update activation environment for D-Bus
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
 
-# Start the portals
-/usr/lib/xdg-desktop-portal-hyprland &
-sleep 2
-/usr/lib/xdg-desktop-portal &
+# Start portals via systemd in correct order:
+# 1. Main portal service (Host) - Must run first so backends can register!
+# 2. KDE portal (provides AppChooser for "Open With" in Dolphin)
+# 3. Hyprland portal (provides Screenshot/ScreenCast)
+
+systemctl --user start xdg-desktop-portal.service
+sleep 1
+systemctl --user start plasma-xdg-desktop-portal-kde.service
+sleep 1
+systemctl --user start xdg-desktop-portal-hyprland.service
