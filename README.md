@@ -74,6 +74,9 @@ cp -r hypr waybar rofi dunst kitty fastfetch Kvantum qt5ct qt6ct nwg-look ~/.con
 # Copy miscellaneous configs
 cp -r gnome-disk-utility gtk-3.0 gtk-4.0 xdg-desktop-portal wlatout ~/.config/
 
+# Copy environment.d (required for Dolphin "Open With" menu to work)
+cp -r environment.d ~/.config/
+
 # Copy Zsh config
 cp .zshrc ~/.zshrc
 ```
@@ -190,5 +193,7 @@ This configuration comes with a custom theme switcher that updates Hyprland, Way
 - `flatpak/`: Flatpak specific overrides.
 - `Kvantum/`, `qt5ct/`, `qt6ct/`: Qt theming configurations.
 - `nwg-look/`: GTK settings.
+- `environment.d/`: Systemd user environment (required for KDE apps like Dolphin).
+- `xdg-desktop-portal/`: Portal backend configuration for file dialogs and "Open With" menu.
 
 ---

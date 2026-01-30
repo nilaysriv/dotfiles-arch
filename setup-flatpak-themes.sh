@@ -7,17 +7,17 @@ set -e
 echo "🎨 Configuring Flatpak themes..."
 
 # Apply global Flatpak overrides
-echo "  → Setting GTK theme to Adwaita-dark..."
-flatpak override --user --env=GTK_THEME=Adwaita-dark
+echo "  → Unsetting GTK theme override (to use system theme)..."
+flatpak override --user --unset-env=GTK_THEME
 
-echo "  → Setting Qt style to Kvantum..."
-flatpak override --user --env=QT_STYLE_OVERRIDE=kvantum
+echo "  → Unsetting Qt style override..."
+flatpak override --user --unset-env=QT_STYLE_OVERRIDE
 
-echo "  → Setting color scheme preference to dark..."
-flatpak override --user --env=COLOR_SCHEME=prefer-dark
+echo "  → Unsetting color scheme preference..."
+flatpak override --user --unset-env=COLOR_SCHEME
 
-echo "  → Setting GTK2 theme..."
-flatpak override --user --env=GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+echo "  → Unsetting GTK2 theme..."
+flatpak override --user --unset-env=GTK2_RC_FILES
 
 echo "  → Enabling GTK portal..."
 flatpak override --user --env=GTK_USE_PORTAL=1
