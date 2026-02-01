@@ -1,0 +1,98 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                          Window Rules Configuration                          ║
+# ║                   Hyprland (Wiki-Accurate Syntax)                           ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# KDE Applications
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:class org.kde.kdeconnect, float on
+windowrule = match:class org.kde.kdeconnect, size 500 600
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# System Applications
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:class nm-connection-editor, float on
+windowrule = match:class nm-connection-editor, size 600 500
+windowrule = match:class nm-connection-editor, center on
+
+windowrule = match:class blueman-manager, float on
+windowrule = match:class blueman-manager, size 800 600
+windowrule = match:class blueman-manager, center on
+
+windowrule = match:class blueman-adapters, float on
+
+windowrule = match:class pavucontrol, float on
+windowrule = match:class pavucontrol, size 800 600
+windowrule = match:class pavucontrol, center on
+
+windowrule = match:title btop, float on
+windowrule = match:title btop, size 1200 800
+windowrule = match:title btop, center on
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Rofi
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:class Rofi, float on
+windowrule = match:class Rofi, stay_focused on
+windowrule = match:class Rofi, decorate off
+windowrule = match:class Rofi, dim_around on
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Waypaper
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:class waypaper, float on
+windowrule = match:class waypaper, size 1000 700
+windowrule = match:class waypaper, center on
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Flatpak Applications
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:class me.kozec.syncthingtk, float on
+windowrule = match:class me.kozec.syncthingtk, size 900 700
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Notification Daemon
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:class dunst, float on
+windowrule = match:class dunst, decorate off
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Picture-in-Picture
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:title Picture-in-Picture, float on
+windowrule = match:title Picture-in-Picture, pin on
+windowrule = match:title Picture-in-Picture, size 640 360
+
+windowrule = match:title .*is sharing your screen, float on
+windowrule = match:title .*is sharing your screen, move 0 0
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Dialog Windows
+# ──────────────────────────────────────────────────────────────────────────────
+
+windowrule = match:title (Open File|Save File|Save As|Choose File|Select File), float on
+windowrule = match:title (Open File|Save File|Save As|Choose File|Select File), center on
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Layer Rules
+# ──────────────────────────────────────────────────────────────────────────────
+
+layerrule = match:namespace waybar, blur on
+layerrule = match:namespace rofi, blur on
