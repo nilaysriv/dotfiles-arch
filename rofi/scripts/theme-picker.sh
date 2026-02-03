@@ -139,8 +139,5 @@ hyprctl reload
 killall waybar
 waybar &
 
-# Restart Portals to ensure stability
-~/.config/hypr/scripts/xdg-portal.sh &
-
 # Notify user
 notify-send "Theme Switcher" "Applied theme: $selected"

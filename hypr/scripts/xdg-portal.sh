@@ -17,19 +17,22 @@ systemctl --user stop plasma-xdg-desktop-portal-kde.service 2>/dev/null || true
 
 sleep 1
 
-# Update activation environment for D-Bus - MUST include XDG_MENU_PREFIX for KDE apps!
+# Update activation environment for D-Bus
+# Per Hyprland Wiki: use --all to propagate ALL environment variables
+# This fixes portal issues after theme changes or logout/login
 export XDG_MENU_PREFIX=plasma-
-dbus-update-activation-environment --systemd \
-    WAYLAND_DISPLAY \
-    XDG_CURRENT_DESKTOP \
-    XDG_SESSION_TYPE \
-    XDG_MENU_PREFIX
 
+# Use --all as recommended by Hyprland Wiki to fix theme-related portal issues
+dbus-update-activation-environment --systemd --all
+
+# Also explicitly import critical variables to systemd
 systemctl --user import-environment \
     WAYLAND_DISPLAY \
     XDG_CURRENT_DESKTOP \
     XDG_SESSION_TYPE \
-    XDG_MENU_PREFIX
+    XDG_SESSION_DESKTOP \
+    XDG_MENU_PREFIX \
+    QT_QPA_PLATFORMTHEME
 
 # Rebuild KDE service cache with correct prefix
 kbuildsycoca6 --noincremental 2>/dev/null &

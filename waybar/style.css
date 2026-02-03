@@ -4,45 +4,45 @@
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Global Variables - Auto-updated by theme switcher */
-@define-color bg #000000;
+@define-color bg #1d1f21;
 @define-color bg-dark #242933;
-@define-color fg #e8e8e8;
-@define-color accent #ffffff;
-@define-color urgent #ff4444;
-@define-color warning #cccccc;
-@define-color success #b0b0b0;
+@define-color fg #c5c8c6;
+@define-color accent #81a2be;
+@define-color urgent #cc6666;
+@define-color warning #f0c674;
+@define-color success #b5bd68;
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
    ║                          Global Styles                                       ║
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 * {
-    font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
-    font-size: 13px;
-    font-weight: 500;
-    border: none;
-    border-radius: 0;
-    min-height: 0;
+  font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
 }
 
 window#waybar {
-    background-color: @bg;
-    color: @fg;
-    border-bottom: 2px solid @accent;
-    transition-property: background-color;
-    transition-duration: 0.3s;
+  background-color: @bg;
+  color: @fg;
+  border-top: 2px solid @accent;
+  transition-property: background-color;
+  transition-duration: 0.3s;
 }
 
 tooltip {
-    background: @bg-dark;
-    border: 1px solid @accent;
-    border-radius: 4px;
-    color: @fg;
-    padding: 10px;
+  background: @bg-dark;
+  border: 1px solid @accent;
+  border-radius: 4px;
+  color: @fg;
+  padding: 10px;
 }
 
 tooltip label {
-    color: @fg;
+  color: @fg;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -50,6 +50,7 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Sleek single-bar design - minimal module styling */
+#custom-arch,
 #workspaces,
 #window,
 #clock,
@@ -64,8 +65,9 @@ tooltip label {
 #custom-notification,
 #tray,
 #custom-power {
-    padding: 4px 12px;
-    margin: 0 2px;
+  padding: 4px 12px;
+  margin: 0 2px;
+  border-bottom: 2px solid transparent;
 }
 
 /* Subtle hover effect for interactive modules */
@@ -79,8 +81,8 @@ tooltip label {
 #battery:hover,
 #custom-notification:hover,
 #custom-power:hover {
-    background-color: rgba(136, 192, 208, 0.15);
-    transition: background-color 0.2s ease;
+  background-color: rgba(136, 192, 208, 0.15);
+  transition: background-color 0.2s ease;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -88,31 +90,46 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #workspaces {
-    padding: 2px 8px;
-    margin: 0;
+  padding: 2px 8px;
+  margin: 0;
 }
 
 #workspaces button {
-    padding: 4px 10px;
-    margin: 0 2px;
-    color: @fg;
-    background-color: transparent;
-    transition: background-color 0.2s ease;
+  padding: 4px 10px;
+  margin: 0 2px;
+  color: @fg;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
 }
 
 #workspaces button:hover {
-    background-color: rgba(136, 192, 208, 0.15);
+  background-color: rgba(136, 192, 208, 0.15);
 }
 
 #workspaces button.active {
-    color: @bg;
-    background-color: @accent;
-    font-weight: bold;
+  color: @bg;
+  background-color: @accent;
+  font-weight: bold;
 }
 
 #workspaces button.urgent {
-    color: @urgent;
-    border-bottom: 2px solid @urgent;
+  color: @urgent;
+  border-bottom: 2px solid @urgent;
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════════╗
+   ║                          Arch Logo (App Launcher)                            ║
+   ╚══════════════════════════════════════════════════════════════════════════════╝ */
+
+#custom-arch {
+  color: @accent;
+  font-size: 16px;
+  padding: 4px 14px;
+}
+
+#custom-arch:hover {
+  background-color: @accent;
+  color: @bg;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -120,10 +137,10 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #window {
-    color: @fg;
-    font-weight: 500;
-    padding: 4px 16px;
-    margin: 0 8px;
+  color: @fg;
+  font-weight: 500;
+  padding: 4px 16px;
+  margin: 0 8px;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -131,13 +148,13 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #clock {
-    color: @accent;
-    font-weight: 600;
-    padding: 4px 16px;
+  color: @accent;
+  font-weight: 600;
+  padding: 4px 16px;
 }
 
 #clock:hover {
-    background-color: rgba(136, 192, 208, 0.15);
+  background-color: rgba(136, 192, 208, 0.15);
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -145,16 +162,16 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #custom-cpu {
-    color: @success;
+  color: @success;
 }
 
 #custom-cpu.warning {
-    color: @warning;
+  color: @warning;
 }
 
 #custom-cpu.critical {
-    color: @urgent;
-    animation: blink 1s ease-in-out infinite;
+  color: @urgent;
+  animation: blink 1s ease-in-out infinite;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -162,7 +179,7 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #custom-ram {
-    color: @accent;
+  color: @accent;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -170,15 +187,15 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #custom-power-profile {
-    color: @warning;
+  color: @warning;
 }
 
 #custom-power-profile.performance {
-    color: @urgent;
+  color: @urgent;
 }
 
 #custom-power-profile.power-saver {
-    color: @success;
+  color: @success;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -186,17 +203,17 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #bluetooth {
-    color: @accent;
+  color: @accent;
 }
 
 #bluetooth.disabled,
 #bluetooth.off {
-    color: @fg;
-    opacity: 0.5;
+  color: @fg;
+  opacity: 0.5;
 }
 
 #bluetooth.connected {
-    color: @success;
+  color: @success;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -204,15 +221,15 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #network {
-    color: @accent;
+  color: @accent;
 }
 
 #network.disconnected {
-    color: @urgent;
+  color: @urgent;
 }
 
 #network.ethernet {
-    color: @success;
+  color: @success;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -220,11 +237,11 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #pulseaudio {
-    color: @accent;
+  color: @accent;
 }
 
 #pulseaudio.muted {
-    color: @urgent;
+  color: @urgent;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -232,7 +249,7 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #backlight {
-    color: @warning;
+  color: @warning;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -240,20 +257,21 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #battery {
-    color: @success;
+  color: @success;
+  background-color: transparent;
 }
 
 #battery.charging {
-    color: @success;
+  color: @success;
 }
 
 #battery.warning:not(.charging) {
-    color: @warning;
+  color: @warning;
 }
 
 #battery.critical:not(.charging) {
-    color: @urgent;
-    animation: blink 1s ease-in-out infinite;
+  color: @urgent;
+  animation: blink 1s ease-in-out infinite;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -261,30 +279,34 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #custom-notification {
-    color: @accent;
+  color: @accent;
 }
 
 #custom-notification.has-notifications {
-    color: @warning;
-    font-weight: bold;
+  color: @warning;
+  font-weight: bold;
 }
 
 #custom-notification.no-notifications {
-    color: @fg;
-    opacity: 0.7;
+  color: @fg;
+  opacity: 0.7;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
    ║                          System Tray                                         ║
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
-#tray>.passive {
-    -gtk-icon-effect: dim;
+#tray {
+  background-color: transparent;
 }
 
-#tray>.needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @urgent;
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @urgent;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -292,15 +314,15 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 #custom-power {
-    color: @urgent;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 0 12px;
+  color: @urgent;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 12px;
 }
 
 #custom-power:hover {
-    background-color: @urgent;
-    color: @bg;
+  background-color: @urgent;
+  color: @bg;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -308,15 +330,15 @@ tooltip label {
    ╚══════════════════════════════════════════════════════════════════════════════╝ */
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    50% {
-        opacity: 0.5;
-    }
+  50% {
+    opacity: 0.5;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }

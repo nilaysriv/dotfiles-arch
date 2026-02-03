@@ -10,11 +10,11 @@ configuration {
 }
 
 * {
-    bg: #000000;
-    bg-alt: #2d2d2d;
-    fg: #e8e8e8;
-    accent: #ffffff;
-    urgent: #ff4444;
+    bg: #1d1f21;
+    bg-alt: #282a2e;
+    fg: #c5c8c6;
+    accent: #81a2be;
+    urgent: #cc6666;
     
     background-color: transparent;
     text-color: @fg;
